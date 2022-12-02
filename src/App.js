@@ -26,10 +26,10 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Layout handleOpen={handleOpen} />}>
-          <Route index element={<LoginPage handleClose={handleClose} open={open} />} />
+        <Route path="/diary" element={<Layout handleOpen={handleOpen} />}>
+          <Route path="/diary" element={<LoginPage handleClose={handleClose} open={open} />} />
           <Route
-            path="calendar"
+            path="/diary/calendar"
             element={
               <RequireAuth>
                 <CalendarPage />
@@ -42,5 +42,6 @@ function App() {
     </>
   );
 }
+// "homepage": "https://maksims-v.github.io/diary/",
 
 export default App;

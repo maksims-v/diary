@@ -25,7 +25,11 @@ const NavBar = ({ handleOpen }) => {
               Войти
             </Button>
           ) : (
-            <Button component={RouterLink} to="/" onClick={() => dispatch(exit())} color="inherit">
+            <Button
+              component={RouterLink}
+              to="/diary"
+              onClick={() => dispatch(exit())}
+              color="inherit">
               Выйти
             </Button>
           )}

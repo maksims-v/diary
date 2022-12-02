@@ -1,7 +1,7 @@
 import React from 'react';
 
 const PageNotFound = () => {
-  return <div>Нехуя Нету!</div>;
+  return <div>ПУСТО (( </div>;
 };
 
 export default PageNotFound;

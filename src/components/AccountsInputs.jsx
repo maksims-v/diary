@@ -23,7 +23,7 @@ export default function AccountsInputs({ handleClose }) {
     const enterPassword = users.filter((item) => item.password === pass);
     if (enterPassword.length === 1) {
       localStorage.getItem('events');
-      navigate('/', { replace: true });
+      navigate('/diary/calendar', { replace: true });
       dispatch(autorisation(user));
       handleClose();
     }
@@ -69,7 +69,7 @@ export default function AccountsInputs({ handleClose }) {
       <Button
         onClick={enter}
         component={RouterLink}
-        to={'/calendar'}
+        to={'/diary/calendar'}
         size="large"
         variant="outlined"
         href="#outlined-buttons">
