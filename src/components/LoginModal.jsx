@@ -1,12 +1,9 @@
 import React from 'react';
 import AccountsInputs from './AccountsInputs';
-import { useLocation, useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Backdrop from '@mui/material/Backdrop';
 import Box from '@mui/material/Box';
-import Modal from '@mui/material/Modal';
 import Typography from '@mui/material/Typography';
-// web.cjs is required for IE11 support
 import { useSpring, animated } from '@react-spring/web';
 
 const Fade = React.forwardRef(function Fade(props, ref) {
@@ -53,11 +50,6 @@ const style = {
 };
 
 const LoginModal = ({ open, handleClose }) => {
-  const navigate = useNavigate();
-  const location = useLocation();
-
-  const fromPage = location.state?.from?.pathname || '/';
-
   return (
     <div>
       <Modal
@@ -71,7 +63,19 @@ const LoginModal = ({ open, handleClose }) => {
           timeout: 500,
         }}>
         <Fade in={open}>
-          <Box sx={style}>
+          <Box
+            sx={{
+              position: 'absolute',
+              top: '50%',
+              left: '50%',
+              transform: 'translate(-50%, -50%)',
+              width: 600,
+              bgcolor: 'background.paper',
+              border: '2px solid #000',
+              boxShadow: 24,
+              textAlign: 'center',
+              p: 4,
+            }}>
             <Typography id="spring-modal-title" variant="h6" component="h2">
               Войдите в Аккаунт
             </Typography>

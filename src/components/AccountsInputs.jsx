@@ -58,7 +58,7 @@ export default function AccountsInputs({ handleClose }) {
           <TextField
             sx={{ mt: 1 }}
             onChange={(value) => setPass(value.target.value)}
-            helperText="Please enter your password"
+            helperText="Логин = пароль"
             id="demo-helper-text-aligned"
             label="Password"
             type="password"
